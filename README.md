@@ -35,7 +35,7 @@ For tasks involving source code or exploit code, include the important code snip
 
 Your repository should now include the following file structure:
 
-    - GiftCardSite/
+    - GiftcardSite/
         - ...
     - Report/
         - Artifacts/
@@ -43,7 +43,7 @@ Your repository should now include the following file structure:
             - <NetID>-screenshot2.jpg
         - <NetID>-AppSec-Lab4.md
 
-> **Note.** The GiftCardSite/ source files should be updated with all of the fixes and modifications made throughout the lab. Throughout grading, the updated source files will be reviewed and corroborated with your lab report.
+> **Note.** The GiftcardSite/ source files should be updated with all of the fixes and modifications made throughout the lab. Throughout grading, the updated source files will be reviewed and corroborated with your lab report.
 
 ## 3) How to Submit
 ---
@@ -117,8 +117,8 @@ assignment, please answer each of the following questions in 3 sentences or fewe
 
 1. What are the two types of Intents?
 2. Which of the two types of Intents is more secure?
-3. What type of Intent is shown on lines 69 to 73 of [SecondFragment.kt](GiftCardSite/app/src/main/java/com/example/giftcardsite/SecondFragment.kt)?
-4. What type of Intent is shown on lines 68 to 70 of [ThirdFragment.kt](GiftCardSite/app/src/main/java/com/example/giftcardsite/ThirdFragment.kt)?
+3. What type of Intent is shown on lines 69 to 73 of [SecondFragment.kt](GiftcardSite/app/src/main/java/com/example/giftcardsite/SecondFragment.kt)?
+4. What type of Intent is shown on lines 68 to 70 of [ThirdFragment.kt](GiftcardSite/app/src/main/java/com/example/giftcardsite/ThirdFragment.kt)?
 5. Between #4 and #5, which incorporates the more secure technique for implementing an Intent?
 
 **Task 1b (10pts): Switching Intents**
@@ -135,7 +135,7 @@ a need for other applications to use Intents to launch Activities within the
 GiftCard application.
 
 For this part, you should remove the possibility for other applications - including other applications written by the same developer - to use Intents to launch activities of your application. To do this, changes will need
-to be made to the [AndroidManifest.xml](GiftCardSite/app/src/main/AndroidManifest.xml) file. 
+to be made to the [AndroidManifest.xml](GiftcardSite/app/src/main/AndroidManifest.xml) file. 
 
 ## Task 2 (10pts): Stoppin' the Eavesdroppin'
 ---
@@ -147,14 +147,14 @@ the REST API that it is using in the backend. For this part of the application,
 please secure all communication with the REST API using HTTPS. This modification
 will require changes to the following files:
 
-1. [SecondFragment.kt](GiftCardSite/app/src/main/java/com/example/giftcardsite/SecondFragment.kt)
-2. [ThirdFragment.kt](GiftCardSite/app/src/main/java/com/example/giftcardsite/ThirdFragment.kt)
-3. [CardScrollingActivity.kt](GiftCardSite/app/src/main/java/com/example/giftcardsite/CardScrollingActivity.kt)
-4. [ProductScrollingActivity.kt](GiftCardSite/app/src/main/java/com/example/giftcardsite/ProductScrollingActivity.kt)
-5. [UseCard.kt](GiftCardSite/app/src/main/java/com/example/giftcardsite/ProductScrollingActivity.kt)
-6. [GetCard.kt](GiftCardSite/app/src/main/java/com/example/giftcardsite/GetCard.kt)
-7. [CardRecyclerViewAdapter.kt](GiftCardSite/app/src/main/java/com/example/giftcardsite/api/model/CardRecyclerViewAdapter.kt)
-8. [RecyclerViewAdapter.kt](GiftCardSite/app/src/main/java/com/example/giftcardsite/api/model/RecyclerViewAdapter.kt)
+1. [SecondFragment.kt](GiftcardSite/app/src/main/java/com/example/giftcardsite/SecondFragment.kt)
+2. [ThirdFragment.kt](GiftcardSite/app/src/main/java/com/example/giftcardsite/ThirdFragment.kt)
+3. [CardScrollingActivity.kt](GiftcardSite/app/src/main/java/com/example/giftcardsite/CardScrollingActivity.kt)
+4. [ProductScrollingActivity.kt](GiftcardSite/app/src/main/java/com/example/giftcardsite/ProductScrollingActivity.kt)
+5. [UseCard.kt](GiftcardSite/app/src/main/java/com/example/giftcardsite/ProductScrollingActivity.kt)
+6. [GetCard.kt](GiftcardSite/app/src/main/java/com/example/giftcardsite/GetCard.kt)
+7. [CardRecyclerViewAdapter.kt](GiftcardSite/app/src/main/java/com/example/giftcardsite/api/model/CardRecyclerViewAdapter.kt)
+8. [RecyclerViewAdapter.kt](GiftcardSite/app/src/main/java/com/example/giftcardsite/api/model/RecyclerViewAdapter.kt)
 
 These changes should not be large. If you find yourself including new libraries,
 or writing more lines of code instead of just modifying code that already exits
@@ -169,10 +169,10 @@ There exists a vulnerability in the REST API that allows users to use GiftCards 
 
 You can start looking for this vulnerability in the following files:
 
-1. [UseCard.kt](GiftCardSite/app/src/main/java/com/example/giftcardsite/ProductScrollingActivity.kt)
-2. [CardInterface.kt](GiftCardSite/app/src/main/java/com/example/giftcardsite/api/service/CardInterface.kt)
+1. [UseCard.kt](GiftcardSite/app/src/main/java/com/example/giftcardsite/ProductScrollingActivity.kt)
+2. [CardInterface.kt](GiftcardSite/app/src/main/java/com/example/giftcardsite/api/service/CardInterface.kt)
 
-> *Hint:* It may be useful to proxy your Android traffic through an HTTP proxy, such as Burp Suite, to help identify the vulnerable API endpoint, narrowing down from those found in the [CardInterface.kt](GiftCardSite/app/src/main/java/com/example/giftcardsite/api/service/CardInterface.kt).
+> *Hint:* It may be useful to proxy your Android traffic through an HTTP proxy, such as Burp Suite, to help identify the vulnerable API endpoint, narrowing down from those found in the [CardInterface.kt](GiftcardSite/app/src/main/java/com/example/giftcardsite/api/service/CardInterface.kt).
 
 **Task 3b (10pts).** Think about how the application is telling the server which card to use and how that may be an issue. Without actually doing so, describe how you would recommend to go about fixing this issue, with as much detail as you find necessary to convey your recommendation(s). Ensure to distinguish your recommendation(s) as applicable to either, the Android mobile application source code or the remote REST API server and/or source code.
 
@@ -200,10 +200,10 @@ For each sub-task, describe the exact source code modified/removed, and explain 
 **Task 4c.** Remove all unnecessary sensor interactions from the mobile application, leaving only those necessary for the application to function and serve its purpose. For each, explain which files were affected, giving a snippet of the offending source code, along with a reason for the removal of each distinct code block. If you left any, explain how they each necessarily support the application.
 
 
-1. [AndroidManifest.xml](GiftCardSite/app/src/main/AndroidManifest.xml)
-2. [UserInfo.kt](GiftCardSite/app/src/main/java/com/example/giftcardsite/api/service/UserInfo.kt)
-3. [CardScrollingActivity.kt](GiftCardSite/app/src/main/java/com/example/giftcardsite/CardScrollingActivity.kt)
-4. [ProductScrollingActivity.kt](GiftCardSite/app/src/main/java/com/example/giftcardsite/ProductScrollingActivity.kt)
+1. [AndroidManifest.xml](GiftcardSite/app/src/main/AndroidManifest.xml)
+2. [UserInfo.kt](GiftcardSite/app/src/main/java/com/example/giftcardsite/api/service/UserInfo.kt)
+3. [CardScrollingActivity.kt](GiftcardSite/app/src/main/java/com/example/giftcardsite/CardScrollingActivity.kt)
+4. [ProductScrollingActivity.kt](GiftcardSite/app/src/main/java/com/example/giftcardsite/ProductScrollingActivity.kt)
 
 
 ## Concluding Remarks
